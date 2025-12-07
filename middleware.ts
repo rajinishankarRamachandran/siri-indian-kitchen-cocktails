@@ -1,21 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
 
 export async function middleware(request: NextRequest) {
   try {
-    const session = await auth.api.getSession({
-      headers: request.headers
-    });
+    // Check for bearer token in Authorization header or cookie
+    const authHeader = request.headers.get("authorization");
+    const bearerToken = request.cookies.get("better-auth.session_token")?.value;
     
-    if (!session) {
-      return NextResponse.redirect(new URL("/login", request.url));
+    // If no authentication token found, redirect to login
+    if (!authHeader && !bearerToken) {
+      const loginUrl = new URL("/login", request.url);
+      loginUrl.searchParams.set("redirect", request.nextUrl.pathname);
+      return NextResponse.redirect(loginUrl);
     }
     
     return NextResponse.next();
   } catch (error) {
     console.error("Middleware error:", error);
-    // If there's an error, redirect to login as a fallback
-    return NextResponse.redirect(new URL("/login", request.url));
+    // If there's an error, allow the request to continue
+    // This prevents blocking the entire site
+    return NextResponse.next();
   }
 }
 

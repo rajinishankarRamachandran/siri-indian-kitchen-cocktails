@@ -1,17 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
-import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
 export async function middleware(request: NextRequest) {
-  const session = await auth.api.getSession({ headers: await headers() });
-  
-  if (!session) {
+  try {
+    const session = await auth.api.getSession({
+      headers: request.headers
+    });
+    
+    if (!session) {
+      return NextResponse.redirect(new URL("/login", request.url));
+    }
+    
+    return NextResponse.next();
+  } catch (error) {
+    console.error("Middleware error:", error);
+    // If there's an error, redirect to login as a fallback
     return NextResponse.redirect(new URL("/login", request.url));
   }
-  
-  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin"],
+  matcher: ["/admin/:path*"],
 };

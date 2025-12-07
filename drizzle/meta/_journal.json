@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1764532656140,
+      "tag": "0000_freezing_chameleon",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1764532743499,
+      "tag": "0001_friendly_venom",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1764835786656,
+      "tag": "0002_puzzling_moon_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1764972105396,
+      "tag": "0003_brown_franklin_richards",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1765015222158,
+      "tag": "0004_empty_adam_warlock",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+/* Updated: 2025-12-07T22:08:10.677Z */
+/* Updated: 2025-12-06T16:24:03.871Z */
+/* Updated: 2025-12-06T10:10:05.384Z */
+/* Updated: 2025-12-06T08:46:48.184Z */
+/* Updated: 2025-12-06T08:05:18.780Z */
+/* Updated: 2025-12-06T07:57:47.916Z */
+/* Updated: 2025-12-06T07:54:49.089Z */
+/* Updated: 2025-12-06T06:30:09.318Z */
+/* Updated: 2025-12-06T05:54:34.708Z */
+/* Updated: 2025-12-06T01:41:02.608Z */
+/* Updated: 2025-12-06T00:27:05.407Z */
+/* Updated: 2025-12-06T00:26:17.859Z */
+/* Updated: 2025-12-05T22:14:27.146Z */
+/* Updated: 2025-12-05T21:33:39.940Z */
+/* Updated: 2025-12-05T05:45:14.610Z */
+/* Updated: 2025-12-05T03:11:03.693Z */
+/* Updated: 2025-12-04T21:19:27.284Z */
+/* Updated: 2025-12-04T04:18:45.673Z */
+/* Updated: 2025-12-04T00:38:15.241Z */
+/* Updated: 2025-12-03T21:51:03.037Z */
+/* Updated: 2025-12-03T03:58:31.472Z */
+/* Updated: 2025-12-03T03:58:30.434Z */
+/* Updated: 2025-12-02T22:47:46.182Z */
+/* Updated: 2025-12-02T20:37:15.910Z */
+/* Updated: 2025-12-02T01:08:42.884Z */
+/* Updated: 2025-12-02T00:02:59.969Z */
+/* Updated: 2025-11-30T22:03:41.947Z */
+/* Updated: 2025-11-30T21:33:38.779Z */
+/* Updated: 2025-11-30T20:11:18.522Z */
+/* Updated: 2025-11-30T19:55:51.869Z */
+/* Updated: 2025-11-28T20:55:14.666Z */
+/* Updated: 2025-11-28T02:37:02.074Z */
+/* Updated: 2025-11-22T16:58:01.906Z */
+/* Updated: 2025-11-22T16:17:23.127Z */
+/* Updated: 2025-11-22T16:17:03.231Z */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #F3E9DC;
+  --foreground: #5E3023;
+  --card: #FAF6F0;
+  --card-foreground: #5E3023;
+  --popover: #FAF6F0;
+  --popover-foreground: #5E3023;
+  --primary: #5E3023;
+  --primary-foreground: #F3E9DC;
+  --secondary: #DAB49D;
+  --secondary-foreground: #5E3023;
+  --muted: #E8DCC8;
+  --muted-foreground: #895737;
+  --accent: #C08552;
+  --accent-foreground: #F3E9DC;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #DAB49D;
+  --input: #DAB49D;
+  --ring: #C08552;
+  --chart-1: #C08552;
+  --chart-2: #895737;
+  --chart-3: #5E3023;
+  --chart-4: #DAB49D;
+  --chart-5: #F3E9DC;
+  --sidebar: #FAF6F0;
+  --sidebar-foreground: #5E3023;
+  --sidebar-primary: #5E3023;
+  --sidebar-primary-foreground: #F3E9DC;
+  --sidebar-accent: #E8DCC8;
+  --sidebar-accent-foreground: #5E3023;
+  --sidebar-border: #DAB49D;
+  --sidebar-ring: #C08552;
+}
+
+.dark {
+  --background: #5E3023;
+  --foreground: #F3E9DC;
+  --card: #895737;
+  --card-foreground: #F3E9DC;
+  --popover: #895737;
+  --popover-foreground: #F3E9DC;
+  --primary: #F3E9DC;
+  --primary-foreground: #5E3023;
+  --secondary: #895737;
+  --secondary-foreground: #F3E9DC;
+  --muted: #895737;
+  --muted-foreground: #DAB49D;
+  --accent: #C08552;
+  --accent-foreground: #F3E9DC;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #895737;
+  --input: #895737;
+  --ring: #C08552;
+  --chart-1: #C08552;
+  --chart-2: #DAB49D;
+  --chart-3: #F3E9DC;
+  --chart-4: #895737;
+  --chart-5: #5E3023;
+  --sidebar: #895737;
+  --sidebar-foreground: #F3E9DC;
+  --sidebar-primary: #C08552;
+  --sidebar-primary-foreground: #F3E9DC;
+  --sidebar-accent: #895737;
+  --sidebar-accent-foreground: #F3E9DC;
+  --sidebar-border: #895737;
+  --sidebar-ring: #C08552;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  @keyframes smoothFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes swingSign {
+    0% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  .page-transition {
+    animation: smoothFadeIn 0.6s ease-out;
+  }
+
+  .button-slide {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .button-slide:hover {
+    transform: translateX(4px);
+  }
+
+  .swing-animation {
+    animation: swingSign 3s ease-in-out infinite;
+    transform-origin: top center;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}

@@ -61,13 +61,16 @@ export default function Footer() {
                 <MapPin className="h-3 w-3 md:h-4 md:w-4 mt-0.5 flex-shrink-0" />
                 <span>275 Rte 4 West<br />Paramus, NJ 07652</span>
               </li>
-              <li className="flex items-center gap-2 text-xs md:text-sm text-primary-foreground/80">
-                <Phone className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
-                <span>Coming Soon</span>
+              <li className="flex items-start gap-2 text-xs md:text-sm text-primary-foreground/80">
+                <Phone className="h-3 w-3 md:h-4 md:w-4 mt-0.5 flex-shrink-0" />
+                <div className="space-y-1">
+                  <div>Neeraj: +1 (848) 260-8267</div>
+                  <div>Amit: +1 (201) 214-0953</div>
+                </div>
               </li>
               <li className="flex items-center gap-2 text-xs md:text-sm text-primary-foreground/80">
                 <Mail className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
-                <span>info@sirirestaurant.com</span>
+                <span>corporate@sirirestaurant.com</span>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation"
 import Footer from "@/components/Footer"
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
 import { useState } from "react"
+import { PhoneSelectDialog } from "@/components/PhoneSelectDialog"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -179,9 +180,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-base md:text-lg mb-1">Phone</h3>
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      (555) 123-4567
-                    </p>
+                    <div className="text-sm md:text-base text-muted-foreground space-y-1">
+                      <p>Neeraj Shokeen: +1 (848) 260-8267</p>
+                      <p>Amit: +1 (201) 214-0953</p>
+                    </div>
                     <p className="text-xs md:text-sm text-muted-foreground mt-1">
                       Monday - Sunday, 11:00 AM - 10:00 PM
                     </p>
@@ -195,7 +197,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-base md:text-lg mb-1">Email</h3>
                     <p className="text-sm md:text-base text-muted-foreground">
-                      info@sirirestaurant.com
+                      corporate@sirirestaurant.com
                     </p>
                     <p className="text-xs md:text-sm text-muted-foreground mt-1">
                       For general inquiries and event bookings
@@ -474,12 +476,11 @@ export default function ContactPage() {
               Planning a special event? Our banquet facilities can accommodate up to 150 guests, and our catering services bring the SIRI experience to your venue. Contact us to discuss custom menus, event coordination, and availability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:5551234567"
-                className="inline-block bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-primary/90 transition-colors text-sm md:text-base"
-              >
-                Call for Events
-              </a>
+              <PhoneSelectDialog>
+                <button className="inline-block bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-primary/90 transition-colors text-sm md:text-base">
+                  Call for Events
+                </button>
+              </PhoneSelectDialog>
               <a
                 href="mailto:events@sirirestaurant.com"
                 className="inline-block border-2 border-primary text-primary px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-colors text-sm md:text-base"
